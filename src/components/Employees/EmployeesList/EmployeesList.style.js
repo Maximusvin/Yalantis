@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const UserItem = styled.li`
-  margin-bottom: 10px;
   padding: 5px;
   border-bottom: 1px solid transparent;
   border-top: 1px solid transparent;
