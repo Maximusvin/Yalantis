@@ -1,1 +1,1 @@
-export const getEmployees = state => state.employees.entities;
+export const getAllEmployees = state => state.employees.entities;

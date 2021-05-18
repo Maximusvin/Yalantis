@@ -1,7 +1,16 @@
 import styled from 'styled-components';
 
-export const Title = styled.h1`
+export const EmployeesPageWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
   padding-top: 50px;
+`;
+
+export const EmployeesWrap = styled.div`
+  width: 65%;
+`;
+
+export const Title = styled.h2`
   margin-bottom: 30px;
 `;
 
@@ -17,19 +26,9 @@ export const AlphabetList = styled.ul`
 
 export const AlphabetItem = styled.li``;
 
-export const SubTitle = styled.h2`
+export const SubTitle = styled.h3`
   text-align: center;
   padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid #000;
-`;
-
-export const UserItem = styled.li`
-  margin-bottom: 10px;
-`;
-
-export const InputLabel = styled.label`
-  display: block;
-  cursor: pointer;
-  margin-bottom: 5px;
 `;

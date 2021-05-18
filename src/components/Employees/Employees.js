@@ -1,20 +1,21 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { EmployeesList, EmployeesBirthday } from 'components';
 import {
+  EmployeesPageWrap,
+  EmployeesWrap,
   AlphabetList,
   AlphabetItem,
   Title,
   SubTitle,
-  InputLabel,
-  UserItem,
 } from './Employees.style';
 import { fetchEmployees } from 'redux/employees/employeesOperations';
-import { getEmployees } from 'redux/employees/employeesSelectors';
+import { getAllEmployees } from 'redux/employees/employeesSelectors';
 
 const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
 const Employees = () => {
-  const employees = useSelector(getEmployees);
+  const employees = useSelector(getAllEmployees);
   const dispatch = useDispatch();
 
   const normalizeAlphabet = alphabet.toUpperCase().split('');
@@ -35,41 +36,28 @@ const Employees = () => {
     );
 
   return (
-    <>
-      <Title>Employees</Title>
-      {employees.length > 0 && (
-        <AlphabetList>
-          {normalizeAlphabet.map((letter, index) => (
-            <AlphabetItem key={index}>
-              <SubTitle>{letter}</SubTitle>
+    <EmployeesPageWrap>
+      <EmployeesWrap>
+        <Title>Employees</Title>
+        {employees.length > 0 && (
+          <AlphabetList>
+            {normalizeAlphabet.map((letter, index) => (
+              <AlphabetItem key={index}>
+                <SubTitle>{letter}</SubTitle>
 
-              {sortEmployees(letter).length > 0 ? (
-                <ul>
-                  {sortEmployees(letter).map(
-                    ({ id, firstName, lastName, dob }) => (
-                      <UserItem key={id}>
-                        {`${lastName} ${firstName}`}
-                        <InputLabel>
-                          <input type="radio" />
-                          not active
-                        </InputLabel>
+                {sortEmployees(letter).length > 0 ? (
+                  <EmployeesList employees={sortEmployees(letter)} />
+                ) : (
+                  '-----'
+                )}
+              </AlphabetItem>
+            ))}
+          </AlphabetList>
+        )}
+      </EmployeesWrap>
 
-                        <InputLabel>
-                          <input type="radio" />
-                          active
-                        </InputLabel>
-                      </UserItem>
-                    ),
-                  )}
-                </ul>
-              ) : (
-                '-----'
-              )}
-            </AlphabetItem>
-          ))}
-        </AlphabetList>
-      )}
-    </>
+      <EmployeesBirthday />
+    </EmployeesPageWrap>
   );
 };
 
