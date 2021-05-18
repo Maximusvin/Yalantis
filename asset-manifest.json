@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Yalantis/static/css/main.692a94a0.chunk.css",
+    "main.js": "/Yalantis/static/js/main.1cbc44e3.chunk.js",
+    "main.js.map": "/Yalantis/static/js/main.1cbc44e3.chunk.js.map",
+    "runtime-main.js": "/Yalantis/static/js/runtime-main.6ee4220d.js",
+    "runtime-main.js.map": "/Yalantis/static/js/runtime-main.6ee4220d.js.map",
+    "static/js/2.e0724657.chunk.js": "/Yalantis/static/js/2.e0724657.chunk.js",
+    "static/js/2.e0724657.chunk.js.map": "/Yalantis/static/js/2.e0724657.chunk.js.map",
+    "index.html": "/Yalantis/index.html",
+    "static/css/main.692a94a0.chunk.css.map": "/Yalantis/static/css/main.692a94a0.chunk.css.map",
+    "static/js/2.e0724657.chunk.js.LICENSE.txt": "/Yalantis/static/js/2.e0724657.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/Yalantis/static/media/montserrat-v15-latin_cyrillic-regular.f263cfd0.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ee4220d.js",
+    "static/js/2.e0724657.chunk.js",
+    "static/css/main.692a94a0.chunk.css",
+    "static/js/main.1cbc44e3.chunk.js"
+  ]
+}
