@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import {
   AddEmployeesId,
   DeleteEmployeesId,
@@ -33,7 +34,7 @@ const RadioControls = ({ id }) => {
         not active
       </InputLabel>
 
-      <InputLabel>
+      <InputLabel active={isActive}>
         <RadioButton
           type="radio"
           value="true"
@@ -44,6 +45,14 @@ const RadioControls = ({ id }) => {
       </InputLabel>
     </RadioControlsWrap>
   );
+};
+
+RadioControls.defaultProps = {
+  id: '',
+};
+
+RadioControls.propTypes = {
+  id: PropTypes.string.isRequired,
 };
 
 export default RadioControls;

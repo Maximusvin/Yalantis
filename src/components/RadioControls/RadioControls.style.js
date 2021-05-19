@@ -10,6 +10,13 @@ export const InputLabel = styled.label`
   cursor: pointer;
   margin-bottom: 5px;
   width: max-content;
+  transition: color 0.2s linear;
+  color: ${props => (props.active ? 'blue' : '')};
+  font-weight: ${props => (props.active ? 600 : 400)};
+
+  &:hover {
+    color: blue;
+  }
 `;
 
 export const RadioButton = styled.input`

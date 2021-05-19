@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { UserList, UserItem } from './EmployeesBirthday.style';
 
 const EmployeesBirthdayList = ({ employees, onGetDate }) => {
@@ -10,6 +11,15 @@ const EmployeesBirthdayList = ({ employees, onGetDate }) => {
       ))}
     </UserList>
   );
+};
+
+EmployeesBirthdayList.defaultProps = {
+  employees: [],
+};
+
+EmployeesBirthdayList.propTypes = {
+  employees: PropTypes.array.isRequired,
+  onGetDate: PropTypes.func.isRequired,
 };
 
 export default EmployeesBirthdayList;
